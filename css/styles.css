@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f1f1f; 
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333333; 
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: right;
+}
+
+.hamburger {
+    cursor: pointer;
+}
+
+.hamburger input {
+    display: none;
+}
+
+.hamburger svg {
+    height: 2em;
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+    fill: none;
+    stroke: #ffffff; 
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+    stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+    transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+}
+
+.menu-list {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333333; 
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(71, 71, 71, 0.2);
+    text-align: left;
+}
+
+.menu-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-weight: bold;
+    text-align: left;
+}
+a:hover {
+    text-decoration: underline;
+    color: #ffffff; 
+}
+
+h6 {
+    text-align: center;
+}
+
+.submenu {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.submenu.show-submenu {
+    display: block;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+button {
+    display: inline-block;
+    padding: 5px 5px;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+}
